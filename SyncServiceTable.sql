@@ -1,0 +1,10 @@
+/****** Script for SelectTopNRows command from SSMS  ******/
+SELECT TOP (1000) [FormDesignID]
+      ,[FormDesignVersionID]
+      ,[ExpressionRuleID]
+      ,[TID]
+      ,[QueueStatus]
+      ,[IsRequeued]
+      ,[DesignType]
+      ,[QueueID]
+  FROM [eBS4_INT_QA2].[UI].[SyncServiceTable]
