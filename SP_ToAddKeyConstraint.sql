@@ -1,4 +1,20 @@
-CREATE OR ALTER PROCEDURE SP_AddKeyConstraint
+/*
+Name:
+    [UI].[SPAddKeyConstraint]
+
+Purpose:
+    To add ForeignKey Constraints on tables 
+
+Assumption:
+    There must be single DML operation on table at a time
+	There must be single row in CDC table 
+
+   History:
+    Created on  25/09/2022 by Shivani Shinde 
+    Modified on ---------
+*/
+
+CREATE OR ALTER PROCEDURE [UI].[SPAddKeyConstraint]
 AS
 BEGIN
 --FormID = 4464
