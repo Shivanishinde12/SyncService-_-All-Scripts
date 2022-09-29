@@ -1,6 +1,18 @@
+/*
+Name:
+    Sync.UpdateOrInsertDocRule 
 
+Purpose:
+    To check DocumentRuleID is available in table to decide insert or update Document Rule Table  
 
-CREATE OR ALTER  PROCEDURE sync.UpdateOrInsertDocRule 
+Assumption:
+    
+  History:
+    Created on  20/08/2022 by Shivani Shinde 
+    Modified on ---------
+*/
+
+CREATE OR ALTER  PROCEDURE Sync.UpdateOrInsertDocRule 
 AS
 DECLARE @formDID int
 SET @formDID = (SELECT tdr.FormDesignID FROM Temp.DocRule tdr join ui.DocumentRule udr ON tdr.FormDesignID=udr.FormDesignID)
@@ -11,8 +23,22 @@ END
 SELECT @formDID as formDID
 PRINT @FDVID
 
+/*
+Name:
+    Sync.UpdateOrInsertDocRule 
 
-CREATE OR ALTER  PROCEDURE sync.UpdateOrInsertFormDesgVr 
+Purpose:
+    To check FormDesignVersionID is available in table to decide insert or update FormDesign Version Table  
+
+Assumption:
+ 
+
+   History:
+    Created on  21/08/2022 by Shivani Shinde 
+    Modified on ---------
+*/
+
+CREATE OR ALTER  PROCEDURE Sync.UpdateOrInsertFormDesgVr 
 AS
 DECLARE @formDVID int
 SET @formDVID = (SELECT tfdv.[FDVID] FROM Temp.FLDRVR tfdv join ui.FormDesignVersion ufdv ON tfdv.[FDVID]=ufdv.FormDesignVersionID)
