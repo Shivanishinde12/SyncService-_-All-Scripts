@@ -1,4 +1,18 @@
-CREATE OR ALTER PROCEDURE [dbo].[sp_SyncService] 
+/*
+Name:
+    [Dbo].[SpSyncService] 
+
+Purpose:
+    To get the value from SyncService and ClientInformation Table and Pass It To DynamicSyncService Stored Procedure  
+
+Assumption:
+   
+  History:
+    Created on  30/08/2022 by Shivani Shinde 
+    Modified on ---------
+*/
+
+CREATE OR ALTER PROCEDURE [Dbo].[SpSyncService] 
 AS
 BEGIN
 DECLARE 
