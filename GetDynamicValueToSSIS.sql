@@ -1,4 +1,17 @@
-  
+  /*
+Name:
+    [dbo].[DynamicExeSyncService]
+
+Purpose:
+    To provideDynamic values to SSIS project using SyncService and ClientInformation Table  
+
+Assumption:
+    
+
+   History:
+    Created on  17/08/2022 by Shivani Shinde 
+    Modified on ---------
+*/
 
 CREATE or ALTER PROCEDURE [dbo].[DynamicExeSyncService]
 	(@QueueId int ,
